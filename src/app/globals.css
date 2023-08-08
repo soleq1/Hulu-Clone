@@ -1,27 +1,533 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* HTML */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #1e2126;
+  font-family: "Questrial", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 16px;
+  height: 100%;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+.ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+/*LOGO  */
+
+.HuluLogo {
+  fill: #1ce783;
+  margin: 12px 32px 12px 12px;
+  padding: 8px 12px 0 36px;
+}
+
+/* Nav Bar*/
+.HuluBanner {
+  background-color: black;
+  top: 0;
+
+}
+.navbarother {
+  background-color: #292c33;
+}
+.HuluNavBar {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  align-items: stretch;
+
+  height: 63px;
+}
+.shadow-test {
+  box-shadow: inset 0px 51px 65px -10px #171717,
+    inset 0px -51px 65px -10px #171717;
+}
+.MainPicture-container {
+  overflow: hidden;
+  padding-bottom: 55px;
+}
+
+/* Navigation Buttons */
+.huluMid-content {
+  display: flex;
+  user-select: none;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  padding: 6px 16px;
+
+  border-radius: 8px;
+}
+
+.huluMid-channel {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #8b94a7;
+  border: none;
+  padding: 12px 24px;
+  opacity: 1;
+  border-radius: 10px;
+}
+.huluMid-channel:hover {
+  color: white;
+  transition: opacity 0.5s ease;
+  background-color: #3f434e;
+}
+
+.test {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Search & Profile Icon */
+.HuluNavBar-Search {
+  display: flex;
+  align-items: stretch;
+  padding-right: 28px;
+}
+.search-svg {
+  margin: 20px 16px;
+  padding: 0 12px;
+  border-radius: 10px;
+}
+.search-svg:hover {
+  background-color: #3f434e;
+}
+.stroke {
+  fill: #8b94a7;
+  stroke: #8b94a7;
+}
+.profile-icon {
+  height: 32px;
+  cursor: pointer;
+  width: 32px;
+  align-items: center;
+  line-height: 32px;
+  background-color: #272c34;
+  border: 2px solid white;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  justify-content: center;
+  -webkit-align-items: center;
+  margin: 16px 32px 12px 16px;
+}
+
+/* Images  and Under */
+.Labels {
+  user-select: none;
+  font-family: "Questrial", Helvetica, Arial, sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  font-stretch: normal;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+
+  padding-left: 5.208333333333334vw;
+}
+.Labels-plus {
+  user-select: none;
+
+  font-family: "Questrial", Helvetica, Arial, sans-serif;
+  color: white;
+  font-weight: 600;
+
+  font-size: 18px;
+  font-stretch: normal;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.4%;
+  padding-left: 5.20833333333vw;
+}
+.Labels-container {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  top: -55px;
+  margin-bottom: -40px;
+  position: relative;
+  box-shadow: inset 0px 21px 15px -15px #171717;
+}
+.Labels-More {
+  padding-left: 10px;
+  font-size: 14px;
+  display: flex;
+  padding-right: 5px;
+  color: #909296;
+  align-items: center;
+}
+.Labels-More-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Poster-Image {
+  user-select: none;
+  border-radius: 10px;
+  transition: transform 0.15s ease;
+}
+.Poster-Image:hover {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
+  transform: scale(1.03);
+  transform-origin: center;
+  z-index: 1000;
+}
+
+/* SLIDER BUTTONS*/
+.swiper-wrapper {
+  padding-left: 5.208333333333334vw;
+  margin-top: calc(-1 * var(--scale-up-margin-space, 12px));
+}
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.swiper-button-next {
+  right: 10px;
+  z-index: 100;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+.swiper-slide {
+  height: auto;
+  z-index: 10;
+
+  width: auto;
+  overflow: visible;
+}
+.Swiper-Title {
+  position: relative;
+  color: white;
+  font-family: "Questrial";
+  font-weight: bold;
+  display: flex;
+  text-align: left;
+  padding-top: 10px;
+  justify-content: space-between;
+}
+
+.MovieCardPosition {
+  position: relative;
+  cursor: pointer;
+}
+.MainPicture {
+  padding-right: 155px;
+  padding-top: 20px;
+  display: flex;
+
+  justify-content: right;
+  height: 650px;
+}
+.MainPictureImage {
+  width: 54%;
+  height: 620px;
+  object-fit: cover;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 30%,
+    black 70%,
+    transparent
+  );
+}
+.MainPicture-title {
+  align-items: center;
+  color: white;
+  position: absolute;
+  font-weight: bolder;
+  top: 30%;
+  left: 5.2vh;
+  padding-left: 5.2vh;
+
+  font-size: 40px;
+}
+.MainPicture-overview {
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: "Questrial";
+  max-width: 450px;
+}
+.MainPicture-card {
+  display: flex;
+  align-items: center;
+  color: white;
+
+  position: absolute;
+
+  margin-top: 41vh;
+
+  margin-left: 5.2vh;
+  left: 5.2vh;
+}
+.MainPicture-Play {
+  font-size: 14px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  margin-right: 24px;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  background-color: white;
+  color: black;
+}
+
+.MainPicture-Details {
+  height: 48px;
+  cursor: pointer;
+  border: 2px solid white;
+  font-weight: 600;
+  margin-right: 12px;
+  border-radius: 4px;
+  letter-spacing: 1.5px;
+  padding: 0 24px;
+  font-size: 14px;
+}
+.MovieCardSpacer {
+  margin-top: 2.5%;
+}
+
+.Genre-background {
+  min-height: 250px;
+  max-height: 250px;
+  user-select: none;
+  border-radius: 10px;
+  color: #1ce783;
+  font-family: "Questrial";
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+
+  background-color: black;
+}
+.Genre-background:hover {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
+  transform: scale(1.03);
+  transform-origin: center;
+  z-index: 1000;
+}
+.Genre-Genre {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+  left: 0;
+  margin-left: 15px;
+}
+.Genre-Space {
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+.Space {
+  margin-top: 50px;
+}
+.Search-Box {
+  padding-top: 30px;
+
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.Search-Button {
+  height: 80px;
+  width: 97%;
+  border-radius: 10px;
+  border: solid 2px white;
+  padding: 12px 16px;
+}
+.Search-text {
+  background: none;
+  font-size: 46px;
+  font-family: "Questrial";
+  font-weight: 600;
+  color: #1ce783;
+  outline: none;
+  width: 100%;
+}
+.Search-Movies {
+  color: white;
+
+  justify-content: space-between;
+  display: flex;
+}
+
+.Search-Size {
+  max-width: fit-content;
+}
+.Search-Row {
+  padding: 10px 2vw;
+  display: flex;
+}
+.Search-Name {
+  padding: 0px 5px;
+  color: white;
+}
+.margin {
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+.Watchlist {
+  background-color: #272c34;
+  position: relative;
+
+  z-index: 0;
+  padding: 42px;
+}
+.Watchlist-title {
+  padding-top: 20px;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  line-height: 1.16;
+  text-transform: none;
+  margin: 8px 0 16px;
+  color: #fff;
+}
+.Watchlist-subtitle {
+  color: white;
+  margin: 0 0 10px;
+  display: flex;
+}
+.Watchlist-svg {
+  stroke: white;
+  height: 25px;
+  width: 25px;
+  margin: 0 5px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.Footer {
+  position: sticky;
+  margin-top: 150px;
+  bottom: 0;
+
+  height: 40vh;
+  left: 0;
+  background-color: #292c33;
+  width: 100%;
+}
+.News-Image-Container {
+  position: relative;
+
+  max-height: 250px;
+}
+.News-Images {
+  border-radius: 10px;
+  transition: transform 0.15s ease;
+  object-fit: cover;
+  cursor: pointer;
+  min-height: 250px;
+  max-height: 100%;
+  user-select: none;
+}
+.News-Images:hover {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
+  transform: scale(1.03);
+  transform-origin: center;
+  z-index: 1000;
+}
+
+.Footer-Section {
+  padding: 48px;
+  height: 450px;
+  min-height: fit-content;
+  margin-top: 10%;
+  background-color: #292c33;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 28px;
+}
+.Footer-Top {
+  display: flex;
+  margin-right: 20%;
+  text-align: left;
+  justify-content: space-between;
+}
+.Footer-SubSection {
+  display: flex;
+  gap: 250px;
+}
+.Footer-Column-Container {
+  display: flex;
+  text-align: left;
+  align-items: flex-start;
+
+  justify-content: space-between;
+}
+.Footer-Column {
+  cursor: pointer;
+  width: 150px;
+  padding-right: 20px;
+}
+.Footer-SubColumn {
+  display: flex;
+  gap: 175px;
+  margin-right: 16.5%;
+  cursor: pointer;
+}
+.Footer-Social {
+  border-top: solid 1px hsl(0deg 0% 100% / 20%);
+  margin: 24px 0 0 -5px;
+  display: flex;
+  padding-top: 15px;
+  gap: 25px;
+  padding-bottom: 15px;
+}
+.Social-Svg {
+  fill: white;
+}
+.Footer-Bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 300;
+  cursor: pointer;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1.05);
+  }
 }
