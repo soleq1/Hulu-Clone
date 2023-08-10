@@ -15,7 +15,7 @@ const TvShows = () => {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   useEffect(() => {
     const storedTV = sessionStorage.getItem("TV");
-    if (storedTV) {
+    if (storedTV !== undefined) {
       setTV(JSON.parse(storedTV));
     }
     const fetchTV = async () => {
@@ -63,9 +63,7 @@ const TvShows = () => {
               width={1080}
               alt={item.name}
               src={
-                `${BASE_URL}${item.backdrop_path || item.poster_path}` ||
-                `${BASE_URL}${item.poster_path}`
-              }
+                `${BASE_URL}${item.backdrop_path}`}
             ></Image>
           </SwiperSlide>
         ))}
