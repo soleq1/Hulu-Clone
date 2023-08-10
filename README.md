@@ -20,7 +20,7 @@ And then visit https://newsapi.org/ to register the news key.
 Then Bundle them Both naming them API_KEY, NEWS_KEY respectively in a .env which will start it up.
 ## Demo
 
-[Hosted on Vercel]()
+[Hosted on Vercel](https://hulu-clone-553y3auhl-soleq1.vercel.app)
 
 
 
